@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Автоматизация и обработка</title>
+  </head>
+  <body class="page">
+    <header class="header header-link"><a href="../index.html">Автоматизация и обработка</a> <span>Обработка: Удаление дублей</span></header>
+    <div class="container">
+        <textarea
+          id="input-container"
+          placeholder="Скопируйте элементы. Строка не должна иметь разделителей. Строка кончилась - перенос. Пустые строки считаются, но не попадают в конечное вычисление. Пробел в строке, так же является символом."
+        ></textarea>
+        <textarea id="val-box"></textarea>
+        <p id="log-info"></p>
+        <div>
+          <button
+            class="btn-cls"
+            id="btn-remove"
+          >
+            Удалить дубли
+          </button>
+          <button
+            class="btn-cls"
+            id="btn-clear"
+          >
+            Очистить поля
+          </button>
+        </div>
+    </div>
+  </body>
+  <script src="../js/app.js"></script>
+</html>

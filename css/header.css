@@ -1,0 +1,26 @@
+.header {
+  width: 100%;
+  height: 8vh;
+  background: var(--myGrey);
+  margin-bottom: 5px;
+  color: azure;
+  font-size: 28px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  align-items: center;
+}
+.header-begin {
+  justify-content: center;
+}
+.header-link {
+    justify-content: space-evenly;
+}
+.header a {
+  display: block;
+  color: azure;
+  font-size: 28px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header span {
+  display: block;
+}

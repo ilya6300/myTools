@@ -1,0 +1,61 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+  }
+  #input-container {
+    min-height: 450px;
+    min-width: 44vw;
+    max-width: 44vw;
+    width: 44vw;
+    max-height: 70vh;
+    border-radius: 15px;
+    padding: 8px 10px;
+    /* height:auto; */
+  }
+  #val-box {
+    min-height: 450px;
+    min-width: 44vw;
+    max-width: 44vw;
+    width: 44vw;
+    background: rgba(0, 0, 0, 0.11);
+    max-height: 70vh;
+    border-radius: 15px;
+    padding: 8px 10px;
+    /* height:auto; */
+  }
+
+  #log-info {
+    width: 94%;
+    min-height: 40px;
+    font-size: 20px;
+    margin: 15px 0;
+    color: var(--myGrey);
+    
+  }
+  .btn-cls {
+    cursor: pointer;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background: var(--myGrey);
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 2px rgba(65, 67, 70, 0.685);
+    transition: box-shadow 0.6s ease-in-out;
+    margin: 0 15px;
+  }
+  .btn-cls:hover {
+    box-shadow: none;
+  }
+  

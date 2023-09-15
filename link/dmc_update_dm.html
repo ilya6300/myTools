@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Автоматизация и обработка</title>
+  </head>
+  <body class="page">
+    <header class="header header-link">
+      <a href="../index.html">Автоматизация и обработка</a
+      ><a href="./dmc.html">DMC</a>
+      <span>Обработка: Обновление статуса КМ</span>
+    </header>
+    <div class="container">
+      <nav class="bar-menu">
+        <label
+          >Статус КМ (На который обновляем)
+          <select id="dm-status-update">
+            <option>Выбери</option>
+            <option>30</option>
+            <option>20</option>
+            <option>60</option>
+          </select>
+        </label>
+        <label
+          >Отключить преобразование кавычек
+          <button class="quotes-on" id="quotes">On ' > ''</button></label>
+          <label>Действие с крипто-хвостом
+            <select id="select-tail">
+              <option>Выбери</option>
+              <option>Обрезать</option>
+              <option>Оставить</option>
+            </select>
+          </label>
+        <!-- <label
+          >Выьерите версию
+          <select id="dmс-version">
+            <option>DMC</option>
+            <option>1.0.3.0</option>
+            <option>1.0.3.2</option>
+          </select>
+        </label> -->
+      </nav>
+      <textarea
+        id="input-container"
+        rows="10"
+        placeholder="Скопируйте в данное поле марки из базы postgres без каких либо изменений. Обработчик сделает и разбирёт всё за вас. 
+
+КМ должно выглядеть - 0104660256060065215AkRXaexihQfY93dJ7c и не должно быть лишних символов в начале марки/строки. Обработчик так же сам заменить кавычки на двойные. Если не требуется автоматически менять одиночные кавычки ' на двойные '', то отключите кнопку преобразования кавычек. 
+
+Выберите необходимый статус. Если статус не выбрать, то статус будет проставлен автоматически на - 30.
+
+Статусы:
+20 – Распечатан – проставляется в базе после того, как код маркировки был отправлен на 
+печать.
+30 - Верифицирован (Сериализован) – код был прочитан камерой сериализации на линии в
+отношении КМ. Для упаковок и паллет код записывается сразу с этим статусом;
+60 - Нанесён (Отчёт о нанесении принят ЧЗ) – после того, как в «Честный Знак» был 
+передан отчёт о нанесении и он был успешно обработан у кодов из этого документа 
+проставляется этот статус.
+
+"
+      ></textarea>
+      <textarea id="val-box"></textarea>
+      <p id="log-info"></p>
+      <div>
+        <button class="btn-cls" id="btn-update-dm">Собрать запрос</button>
+        <button class="btn-cls" id="btn-clear">Очистить поля</button>
+      </div>
+    </div>
+  </body>
+  <script src="./dmc-update-dm.js"></script>
+</html>
